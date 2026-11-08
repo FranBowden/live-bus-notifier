@@ -21,7 +21,7 @@ class BusTracker
     /**
      * Gets live buses in the bounding box and buzzes if our bus is there
      */
-    function getLiveLocation()
+    function getLiveLocation() : void
     {
         $params = [
             'boundingBox' => $this->env['BOUNDING_BOX'],
@@ -75,7 +75,7 @@ class BusTracker
      * @return string The raw response from the API
      * @throws Exception If there is a cURL error
      */
-function makeRequest($method, $endpoint, $body = null, $headers = []): string
+    function makeRequest($method, $endpoint, $body = null, $headers = []): string
     {
         $ch = curl_init($endpoint);
 
@@ -106,7 +106,7 @@ function makeRequest($method, $endpoint, $body = null, $headers = []): string
      *
      * @param string $message The notification text
      */
-    function sendNotification($message)
+    function sendNotification($message) : void
     {
         $this->makeRequest('POST', 'https://ntfy.sh/' . $this->env['NTFY_TOPIC'], $message, [
             'Priority: urgent',
