@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug dont-miss-it",
+      "type": "php",
+      "request": "launch",
+      "program": "${workspaceFolder}/index.php",
+      "cwd": "${workspaceFolder}",
+      "port": 9003,
+      "runtimeExecutable": "/opt/homebrew/bin/php"
+    }
+  ]
+}

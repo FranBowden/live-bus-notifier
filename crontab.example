@@ -1,0 +1,3 @@
+# Runs weekdays 07:35–07:55, every 30 seconds
+35-55 7 * * 1-5 /path/to/php /path/to/dont-miss-it/index.php >> /tmp/dont-miss-it.log 2>&1
+35-55 7 * * 1-5 sleep 30 && /path/to/php /path/to/dont-miss-it/index.php >> /tmp/dont-miss-it.log 2>&1
